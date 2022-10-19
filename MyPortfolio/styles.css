@@ -1,0 +1,662 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.primary-color {
+  color: "#cfc03c";
+  background-color: "#cfc03c";
+}
+
+.secondary-color {
+  color: "#ba8f2b";
+  background-color: "#ba8f2b";
+}
+
+.separator {
+  width: 100%;
+  color:#0d7e69;
+  background-color: #0d7e69;
+  border: none;
+  height: 1px;
+}
+
+.pimg1 {
+  background-image: url("./Photos/background-image-1.jpg");
+}
+
+.pimg2 {
+  background-image: url("./Photos/background-image-2.jpg");
+}
+
+.pimg3 {
+  background-image: url("./Photos/background-image-3.jpg");
+}
+
+.pimg4 {
+  background-image: url("./Photos/background-image-4.jpg");
+}
+
+.title-photo {
+  width: 100%;
+  height: 250px;
+  min-height: 200px;
+  overflow: hidden;
+  object-fit: cover;
+  position: relative;
+  opacity: 0.75;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #1d9b82;
+  font-size: 80px;
+  font-family: 'Goudy Bookletter 1911', serif;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 1450px) {
+  .title {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .title {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title-photo {
+    background-attachment: local;
+  }
+}
+
+.title-area {
+  width: "100%";
+  position: relative;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #0d7e69;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 5px 5px -5px black;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+
+.navbar a {
+  display: block;
+  color: #1d9b82;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-weight: 500;
+  transition: all 1s;
+}
+
+.navbar .float-left {
+  float: left;
+  transition: all 1s;
+}
+
+.navbar .float-right {
+  float: right;
+  transition: all 0.5s;
+}
+
+.navbar .float-left:hover {
+  background: #e0e0e0;
+}
+
+.navbar .float-right:hover {
+  color: #0d7d68;
+}
+
+/* 
+ * STYLING FOR HOME
+ */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.home-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.75;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./Photos/background-home.jpg");
+}
+
+.headline-area {
+  width: 100%;
+  text-align: center;
+  padding-top: 200px;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.headline-area h1 {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  color:#0d7d68;
+  transition: all 0.5s;
+
+}
+
+.menu-area {
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.menu {
+  list-style-type: none;
+}
+
+.menu-li {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.menu-li a {
+  text-decoration: none;
+  color:#e0fff9;
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 20px;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+
+.menu-li a:hover {
+  margin-left: 20px;
+  color:#1d9b82;
+}
+
+.link-area {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.links {
+  list-style-type: none;
+}
+
+.links-li {
+  margin: 0;
+  padding: 0;
+}
+
+.links-li a {
+  color:#1d9b82;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 0.5s;
+  text-decoration: none;
+} 
+
+.links-li a:hover {
+  color:#e0fff9;
+}
+
+@media screen and (max-width: 600px) {
+  .headline-area h1 {
+    font-size: 30px;
+  }
+
+  .headline-area {
+    padding-top: 300px;
+  }
+
+  .menu-li a {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .links-li a {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/*
+ * STYLING FOR ABOUT ME
+ */
+
+.about-me-text-area {
+  flex: 5;
+  width: 100%;
+}
+
+.about-me-picture-area {
+  flex: 4;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.img-border {
+  width: 350px;
+  height: 350px;
+  margin-top: 30px;
+  margin-bottom: 45px;
+  border-style: solid;
+  border-width: 2px;
+  border-color:#0d7e69;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-picture {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  margin: 0;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+}
+
+.text {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 20;
+  padding: 40px;
+  margin: 40px;
+  text-align: center;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.about-me-area {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 900px) {
+  .about-me-area {
+    flex-direction: column;
+  }
+}
+
+/*
+ * STYLING FOR MY PROJECTS
+ */
+
+ .my-projects-info {
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  display: grid;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1rem;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 1325px) {
+  .my-projects-info {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .my-projects-info {
+    grid-template-columns: auto;
+  }
+}
+
+.project {
+  width: 400px;
+  height: 400px;
+  background-color:#0d7e69;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+}
+
+.project a {
+  text-decoration: none;
+}
+
+.project-title-area {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.project-desc-area {
+  flex: 5;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.project-desc {
+  font-family: 'Goudy Bookletter 1911', serif;
+  color: #e0fff9;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.project-button-text {
+  font-family: 'Goudy Bookletter 1911', serif;
+  color:#e0fff9;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 1s;
+}
+
+.project-button-text:hover {
+  text-decoration: underline;
+}
+
+.project-arrow-logo {
+  color: #e0fff9;
+}
+
+.project-title {
+  font-family: 'Goudy Bookletter 1911', serif;
+  color: #e0fff9;
+  font-size: 25px;
+  font-weight: 800;
+  transition: all 0.5s;
+}
+
+/*
+ * STYLING FOR MY SERTIFICATES
+ */
+
+ .sertificates-info {
+  width: calc(100% - 10vw);
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.sertificates-area {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  transition: padding 1s;
+}
+
+.sertificates-area:hover {
+  cursor: pointer;
+}
+
+.sertificates-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  color:#1d9b82;
+  transition: all 0.5s;
+}
+
+.sert-title {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 25px;
+  color: #1d9b82;
+  padding-top: 30px;
+}
+
+.sertificates-area:hover{
+  padding-left: 40px;
+}
+
+.arrow-rotate-X {
+  transform: rotateX(180deg);
+}
+
+.sert-img {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.show-image {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 50vw;
+  height: auto;
+  transition: all 0.5s;
+}
+
+.hide-image {
+  width: 0vw;
+  height: auto;
+  padding: 0px;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 900px) {
+  .show-image {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .show-image {
+    width: 90vw;
+  }
+}
+
+/*
+ * STYLING FOR CONTACT ME
+ */
+
+.contact-info {
+  margin: 5vw;
+  margin-bottom: 200px;
+  text-align: center;
+}
+
+.number {
+  color: #1d9b82;
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 40px;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+
+.number:hover {
+  cursor: pointer;
+}
+
+.email:hover {
+  cursor: pointer;
+}
+
+.email {
+  color: #1d9b82;
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 40px;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 950px) {
+  .email {
+    font-size: 30px;
+  }
+  .number {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .email {
+    font-size: 25px;
+  }
+  .number {
+    font-size: 25px;
+  }
+}
+
+.tooltip-top {
+  position: relative;
+}
+
+.tooltip-top .tooltip-text-top {
+  visibility: hidden;
+  width: 120px;
+  background-color: #0d7e69;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip-top .tooltip-text-top:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #0d7e69 transparent transparent transparent;
+}
+
+.tooltip-bottom {
+  position: relative;
+}
+
+.tooltip-bottom .tooltip-text-bottom {
+  visibility: hidden;
+  width: 120px;
+  background-color: #0d7e69;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip-bottom .tooltip-text-bottom:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #0d7e69 transparent;
+}
+
+.tooltip-text-top {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 14px;
+}
+
+.tooltip-top:hover .tooltip-text-top {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-text-bottom {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 14px;
+}
+
+.tooltip-bottom:hover .tooltip-text-bottom {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*
+ * STYLING FOR THE BOTTOM AREA
+ */
+
+.bottom-header {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: #1d9b82;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.copyright {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
