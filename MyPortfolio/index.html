@@ -36,11 +36,11 @@
             <div class="close-button-cross-135"></div>
         </div>
         <div class="menu-item-area">
-            <a href="#home" class="float-left">.home()</a>
-            <a href="#about-me" class="float-left">.about_me()</a>
-            <a href="#my-projects" class="float-left">.my_projects()</a>
-            <a href="#my-sertificates" class="float-left">.my_sertificates()</a>
-            <a href="#contact-me" class="float-left">.contact_me()</a>
+            <a href="#home" class="float-left" onclick="closeMenu()">.home()</a>
+            <a href="#about-me" class="float-left" onclick="closeMenu()">.about_me()</a>
+            <a href="#my-projects" class="float-left" onclick="closeMenu()">.my_projects()</a>
+            <a href="#my-sertificates" class="float-left" onclick="closeMenu()">.my_sertificates()</a>
+            <a href="#contact-me" class="float-left" onclick="closeMenu()">.contact_me()</a>
         </div>
         <div class="menu-link-area">
             <a href="https://www.linkedin.com/" class="fa fa-linkedin float-right"></a>
@@ -275,6 +275,8 @@
         const PICTURE_HEIGHT_BOTTOM = 25;
         const PICTURE_HEIGHT_TOP = 50;
 
+        let smallOpened = false;
+
         let navbar = document.querySelector(".navbar");
         let navbarSmall = document.querySelector(".navbar-small");
         let burgerMenu = document.querySelector(".menu-burger");
@@ -310,8 +312,11 @@
             }
             else
             {
-                burgerMenu.style.opacity = 1;
-                burgerMenu.style.pointerEvents = "all";
+                if (!smallOpened)
+                {
+                    burgerMenu.style.opacity = 1;
+                    burgerMenu.style.pointerEvents = "all";
+                }
             }
 
             if (pictureHeightFromBottom >= PICTURE_HEIGHT_BOTTOM && pictureHeightFromTop >= PICTURE_HEIGHT_TOP) {
@@ -333,6 +338,7 @@
                 burgerMenu.style.opacity = 0;
                 burgerMenu.style.pointerEvents = "none";
                 navbarSmall.style.right = "-500px";
+                smallOpened = false;
 
                 if (scroll_Y >= windowHeight * SCROLL_PERCENTAGE && windowWidth >= IMPORTANT_WINDOW_WIDTH)
                 {
@@ -347,10 +353,13 @@
             }
             else
             {
+                if (!smallOpened)
+                {
+                    burgerMenu.style.opacity = 1;
+                    burgerMenu.style.pointerEvents = "all";
+                }
                 navbar.style.opacity = 0;
                 navbar.style.pointerEvents = "none";
-                burgerMenu.style.opacity = 1;
-                burgerMenu.style.pointerEvents = "all";
             }
         });
 
@@ -361,6 +370,7 @@
             let burgerMenu = document.querySelector(".menu-burger");
             burgerMenu.style.opacity = 1;
             burgerMenu.style.pointerEvents = "all";
+            smallOpened = false;
         }
 
         function openMenu()
@@ -370,6 +380,7 @@
             let burgerMenu = document.querySelector(".menu-burger");
             burgerMenu.style.opacity = 0;
             burgerMenu.style.pointerEvents = "none";
+            smallOpened = true;
         }
 
     </script>
