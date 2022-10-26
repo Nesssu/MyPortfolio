@@ -30,6 +30,31 @@
         <a href="https://bitbucket.org/product/" class="fa fa-bitbucket float-right"></a>
     </div>
 
+    <div class="navbar-small" id="navbar-small">
+        <div class="close-button-area" onclick="closeMenu()">
+            <div class="close-button-cross-45"></div>
+            <div class="close-button-cross-135"></div>
+        </div>
+        <div class="menu-item-area">
+            <a href="#home" class="float-left">.home()</a>
+            <a href="#about-me" class="float-left">.about_me()</a>
+            <a href="#my-projects" class="float-left">.my_projects()</a>
+            <a href="#my-sertificates" class="float-left">.my_sertificates()</a>
+            <a href="#contact-me" class="float-left">.contact_me()</a>
+        </div>
+        <div class="menu-link-area">
+            <a href="https://www.linkedin.com/" class="fa fa-linkedin float-right"></a>
+            <a href="https://github.com/Nesssu" class="fa fa-github float-right"></a>
+            <a href="https://bitbucket.org/product/" class="fa fa-bitbucket float-right"></a>
+        </div>
+    </div>
+
+    <div class="menu-burger" onclick="openMenu()">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+    </div>
+
     <!--
         PROFILE AND MENU
     -->
@@ -41,7 +66,7 @@
         <div class="headline-area">
             <h1>
                 Hey! My name is Nestori.
-            <h1/>
+            </h1>
             <h1>
                 I design & create software.
             </h1>
@@ -246,11 +271,13 @@
     <script>
 
         const SCROLL_PERCENTAGE = 0.85;
-        const IMPORTANT_WINDOW_WIDTH = 600;
-        const PICTURE_HEIGHT_BOTTOM = 75;
-        const PICTURE_HEIGHT_TOP = 150;
+        const IMPORTANT_WINDOW_WIDTH = 850;
+        const PICTURE_HEIGHT_BOTTOM = 25;
+        const PICTURE_HEIGHT_TOP = 50;
 
         let navbar = document.querySelector(".navbar");
+        let navbarSmall = document.querySelector(".navbar-small");
+        let burgerMenu = document.querySelector(".menu-burger");
         let profilePicture = document.querySelector(".profile-picture");
         let scroll_Y = window.scrollY;
         let windowHeight = window.innerHeight;
@@ -265,15 +292,26 @@
             pictureHeightFromTop = profilePicture.getBoundingClientRect().top;
             pictureHeightFromBottom = windowHeight - profilePicture.getBoundingClientRect().bottom;
 
-            if (scroll_Y >= windowHeight * SCROLL_PERCENTAGE && windowWidth >= IMPORTANT_WINDOW_WIDTH) {
-                navbar.style.opacity = 1;
-                navbar.style.pointerEvents = "all";
-            } else if (scroll_Y <= windowHeight * SCROLL_PERCENTAGE && windowWidth >= IMPORTANT_WINDOW_WIDTH) {
-                navbar.style.opacity = 0;
-                navbar.style.pointerEvents = "none";
-            } else {
-                navbar.style.opacity = 1;
-                navbar.style.pointerEvents = "all";
+            if (windowWidth >= IMPORTANT_WINDOW_WIDTH)
+            {
+                burgerMenu.style.opacity = 0;
+                burgerMenu.style.pointerEvents = "none";
+
+                if (scroll_Y >= windowHeight * SCROLL_PERCENTAGE && windowWidth >= IMPORTANT_WINDOW_WIDTH)
+                {
+                    navbar.style.opacity = 1;
+                    navbar.style.pointerEvents = "all";
+                }
+                else
+                {
+                    navbar.style.opacity = 0;
+                    navbar.style.pointerEvents = "none";
+                }
+            }
+            else
+            {
+                burgerMenu.style.opacity = 1;
+                burgerMenu.style.pointerEvents = "all";
             }
 
             if (pictureHeightFromBottom >= PICTURE_HEIGHT_BOTTOM && pictureHeightFromTop >= PICTURE_HEIGHT_TOP) {
@@ -290,17 +328,49 @@
             windowHeight = window.innerHeight;
             windowWidth = window.innerWidth;
 
-            if (scroll_Y >= windowHeight * SCROLL_PERCENTAGE && windowWidth >= IMPORTANT_WINDOW_WIDTH) {
-                navbar.style.opacity = 1;
-                navbar.style.pointerEvents = "all";
-            } else if (scroll_Y <= windowHeight * SCROLL_PERCENTAGE && windowWidth >= IMPORTANT_WINDOW_WIDTH) {
+            if (windowWidth >= IMPORTANT_WINDOW_WIDTH)
+            {
+                burgerMenu.style.opacity = 0;
+                burgerMenu.style.pointerEvents = "none";
+                navbarSmall.style.right = "-500px";
+
+                if (scroll_Y >= windowHeight * SCROLL_PERCENTAGE && windowWidth >= IMPORTANT_WINDOW_WIDTH)
+                {
+                    navbar.style.opacity = 1;
+                    navbar.style.pointerEvents = "all";
+                }
+                else
+                {
+                    navbar.style.opacity = 0;
+                    navbar.style.pointerEvents = "none";
+                }
+            }
+            else
+            {
                 navbar.style.opacity = 0;
                 navbar.style.pointerEvents = "none";
-            } else {
-                navbar.style.opacity = 1;
-                navbar.style.pointerEvents = "all";
+                burgerMenu.style.opacity = 1;
+                burgerMenu.style.pointerEvents = "all";
             }
         });
+
+        function closeMenu()
+        {
+            let navbarSmall = document.querySelector(".navbar-small");
+            navbarSmall.style.right = "-500px";
+            let burgerMenu = document.querySelector(".menu-burger");
+            burgerMenu.style.opacity = 1;
+            burgerMenu.style.pointerEvents = "all";
+        }
+
+        function openMenu()
+        {
+            let navbarSmall = document.querySelector(".navbar-small");
+            navbarSmall.style.right = "0px";
+            let burgerMenu = document.querySelector(".menu-burger");
+            burgerMenu.style.opacity = 0;
+            burgerMenu.style.pointerEvents = "none";
+        }
 
     </script>
 

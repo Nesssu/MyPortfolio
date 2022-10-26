@@ -147,6 +147,112 @@ html {
   color: #0d7d68;
 }
 
+.navbar-small {
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  overflow: hidden;
+  z-index: 3;
+  top: 0px;
+  right: -500px;
+  transition: all 0.5s;
+  box-shadow: 0 0 5px 1px black;
+}
+
+.close-button-area {
+  position: absolute;
+  left: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.close-button-area:hover {
+  cursor: pointer;
+}
+
+.close-button-cross-45 {
+  width: 4px;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #0d7d68;
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.close-button-cross-135 {
+  width: 4px;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #0d7d68;
+  transform: rotate(135deg);
+  position: absolute;
+}
+
+.menu-item-area {
+  margin: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item-area a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  color:#0d7d68;
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: x-large;
+}
+
+.menu-link-area {
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.menu-link-area a {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color:#0d7d68;
+  font-size: larger;
+}
+
+.menu-burger {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #fff;
+  z-index: 3;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px 1px black;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+
+.menu-burger:hover {
+  cursor: pointer;
+}
+
+.burger-line {
+  width: 60%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #0d7d68;
+  margin: 3px;
+}
+
 /* 
  * STYLING FOR HOME
  */
@@ -250,7 +356,7 @@ html {
   color:#e0fff9;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .headline-area h1 {
     font-size: 30px;
   }
