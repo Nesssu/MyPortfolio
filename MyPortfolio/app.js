@@ -8,23 +8,23 @@ let desc_3 = false;
 
 function copy_number() {
     navigator.clipboard.writeText("+358451280830");
-    var span_number = document.getElementById("copy-number");
+    const span_number = document.getElementById("copy-number");
     span_number.textContent = "Number copied!";
 }
 
 function copy_email() {
     navigator.clipboard.writeText("nestori.kangashaka@student.lut.fi");
-    var span_email = document.getElementById("copy-email");
+    const span_email = document.getElementById("copy-email");
     span_email.textContent = "Email copied!";
 }
 
 function change_number_back() {
-    var span_number = document.getElementById("copy-number");
+    const span_number = document.getElementById("copy-number");
     span_number.textContent = "Copy the number";
 }
 
 function change_email_back() {
-    var span_email = document.getElementById("copy-email");
+    const span_email = document.getElementById("copy-email");
     span_email.textContent = "Copy the email";
 }
 

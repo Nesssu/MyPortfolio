@@ -418,10 +418,8 @@ html {
 
 .text {
   font-family: 'Goudy Bookletter 1911', serif;
-  font-size: 20;
-  padding: 40px;
-  margin: 40px;
-  text-align: center;
+  font-size: 18px;
+  margin: 30px;
   font-weight: 400;
   font-style: normal;
 }
