@@ -1,38 +1,130 @@
+h1 {
+  font-size: xx-large;
+  font-weight: lighter;
+  color: #4b371c;
+}
+
+h2 {
+  font-size: x-large;
+  font-weight: normal;
+  color: #4b371c;
+}
+
+h3 {
+  font-size: larger;
+  font-weight: lighter;
+  color: #4b371c;
+}
+
+p {
+  font-size: small;
+  font-weight: lighter;
+  color: #4b371c;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  border-bottom: solid;
+  border-width: thin;
+  border-color: #4b371c;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.NavButtonArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.NavButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 50px 20px 50px;
+  padding: 10px 20px 10px 20px;
+  border: solid;
+  border-width: thin;
+  border-radius: 5px;
+  border-color: #4b371c;
+  transition: all 0.75s;
+}
+
+.NavButton:hover {
+  cursor: pointer;
+  background-color: #4b371c;
+  color: White;
+}
+
+.Footer {
+  width: 100%;
+  height: 50px;
+  border-top: solid;
+  border-color: #4b371c;
+  border-width: thin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.DividerHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 20px 0;
+  border-top: solid;
+  border-bottom: solid;
+  border-width: thin;
+  border-color: #4b371c;
+}
+
+.ImageOne {
+  background-image: url(./media/background-image-1.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.ImageTwo {
+  background-image: url(./media/background-image-2.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.LinkArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 400px;
+  min-width: 200px;
+
+}
+
+.ContactArea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
