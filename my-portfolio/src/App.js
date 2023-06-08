@@ -1,5 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
+
 
 // This is a model that display project information that it gets as props.
 function Project(props)
@@ -15,8 +16,9 @@ function Project(props)
 function Projects()
 {
   return (
-    <div>
+    <div className='ProjectsBackground'>
       <h3>Project data displayed here</h3>
+      <Project />
     </div>
   )
 }
@@ -39,17 +41,6 @@ function App() {
 
       <div className='Header'>
         <h1>My Portfolio</h1>
-        <div className='NavButtonArea'>
-          <div className='NavButton'>
-            Home
-          </div>
-          <div className='NavButton'>
-            Projects
-          </div>
-          <div className='NavButton'>
-            Contact
-          </div>
-        </div>
       </div>
 
       <div className='AboutArea'>
@@ -70,12 +61,10 @@ function App() {
       </div>
 
       <div className='ContactArea'>
-        <h3>email</h3>
-        <h3>maybe rough location</h3>
+        <p className='ContactAreaText'>You can contact me at: <span className='NormalText'>nessu.kangashaka@gmail.com</span></p>
         <div className='LinkArea'>
-          <p>link to github</p>
-          <p>link to linkedin</p>
-          <p>link to bitbucket maybe</p>
+          <a href='https://github.com/Nesssu'><FaGithubSquare className='LinkIcon' /></a>
+          <a href='https://www.linkedin.com/in/nestori-kangashaka-230941163/'><FaLinkedin className='LinkIcon' /></a>
         </div>
       </div>
 
