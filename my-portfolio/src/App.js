@@ -12,6 +12,7 @@ function Project(props)
         <div className='ProjectHeaderArea'>
           <h3>{props.name}</h3>
         </div>
+        <div className='Separator' />
         <div className='ProjectAboutArea'>
           <p>{props.about}</p>
         </div>
@@ -46,7 +47,8 @@ function App() {
   const PROJECT_DATA = [
     {
       name: "My Portfolio",
-      about: `This is the website that you arecurrently in. If you want, you can inspect the source code of this project from the link below.`,
+      about: `This is the website that you are currently in. If you want, you can inspect the source code of this project from
+      the GitHub link below.`,
       github: "https://github.com/Nesssu/MyPortfolio",
       link: ""
     },
@@ -69,10 +71,12 @@ function App() {
       </div>
 
       <div className='AboutArea'>
-        <h3>Name</h3>
-        <p>me</p>
-        <p>school</p>
-        <p>experience</p>
+        <p>
+          My name is Nestori and I'm a Software Engineer. 
+          I'm currently studying computer science at LUT University in Lappeenranta, Finland. 
+          I wrote my first lines of code in University and have been very excited about it ever since. I'm very interested in creating
+          beautiful, good quality software.
+        </p>
       </div>
 
       <div className='DividerHeader ImageOne'>

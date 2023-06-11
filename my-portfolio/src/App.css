@@ -94,6 +94,38 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 500px;
+  margin: 50px 0 50px 0;
+  padding: 5px;
+  text-align: justify;
+}
+
+.SpecialPartOfParagraph {
+  font-size: large;
+  font-weight: normal;
+  color: #eea4bb;
+  text-shadow: 1px 1px 0 #441e2a;
+}
+
+.AboutArea p::first-line {
+  height: 10px;
+}
+
+.AboutArea p {
+  position: relative;
+  padding-left: 45px;
+}
+
+.AboutArea p::before {
+  content: "Hi!";
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-right: 10px;
+  font-size: xx-large;
+  font-weight: normal;
+  color: #eea4bb;
+  text-shadow: 1px 1px 0 #441e2a;
 }
 
 .Footer {
@@ -191,6 +223,12 @@ body {
 
 .ProjectAboutArea {
   overflow: scroll;
+  text-align: justify;
+  padding: 0 7px 0 7px;
+}
+
+.ProjectAboutArea p {
+  margin: 3px 0 3px 0;
 }
 
 .ProjectLinksBackground {
@@ -204,6 +242,13 @@ body {
   flex-direction: row;
   justify-content: space-around;
   background-color: #eea4bb;
+}
+
+.Separator {
+  background-color: #888;
+  height: 1px;
+  width: 100%;
+
 }
 
 
